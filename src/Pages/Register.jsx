@@ -44,7 +44,8 @@ const Register = () => {
           setPassword("");
         });
     } catch (error) {
-      toast.error(error.response.data.message);
+      console.error(error);
+      toast.error(error.response ? error.response.data.message : "An error occurred");
     }
   };
 

@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useState } from "react";
 import { toast } from "react-toastify";
 
@@ -13,8 +13,7 @@ const AppointmentForm = () => {
   const [gender, setGender] = useState("");
   const [appointmentDate, setAppointmentDate] = useState("");
   const [department, setDepartment] = useState("Pediatrics");
-  const [doctorFirstName, setDoctorFirstName] = useState("");
-  const [doctorLastName, setDoctorLastName] = useState("");
+  const [doctorName, setDoctorName] = useState("");
   const [address, setAddress] = useState("");
   const [hasVisited, setHasVisited] = useState(false);
 
@@ -58,8 +57,7 @@ const AppointmentForm = () => {
           gender,
           appointment_date: appointmentDate,
           department,
-          doctor_firstName: doctorFirstName,
-          doctor_lastName: doctorLastName,
+          doctor_Name: doctorName,
           hasVisited: hasVisitedBool,
           address,
         },
@@ -78,8 +76,7 @@ const AppointmentForm = () => {
         setGender(""),
         setAppointmentDate(""),
         setDepartment(""),
-        setDoctorFirstName(""),
-        setDoctorLastName(""),
+        setDoctorName(""),
         setHasVisited(""),
         setAddress("");
     } catch (error) {
@@ -152,8 +149,7 @@ const AppointmentForm = () => {
               value={department}
               onChange={(e) => {
                 setDepartment(e.target.value);
-                setDoctorFirstName("");
-                setDoctorLastName("");
+                setDoctorName("");
               }}
             >
               {departmentsArray.map((depart, index) => {
@@ -165,12 +161,8 @@ const AppointmentForm = () => {
               })}
             </select>
             <select
-              value={`${doctorFirstName} ${doctorLastName}`}
-              onChange={(e) => {
-                const [firstName, lastName] = e.target.value.split(" ");
-                setDoctorFirstName(firstName);
-                setDoctorLastName(lastName);
-              }}
+              value={doctorName}
+              onChange={(e) => setDoctorName(e.target.value)}
               disabled={!department}
             >
               <option value="">Select Doctor</option>
