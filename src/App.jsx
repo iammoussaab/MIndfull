@@ -13,6 +13,7 @@ import axios from "axios";
 import { Context } from "./main";
 import Login from "./Pages/Login";
 import SurveyForm from "./components/SurveyForm";
+import Goals from "./components/GoalForm";
 const App = () => {
   const { isAuthenticated, setIsAuthenticated, setUser } =
     useContext(Context);
@@ -47,6 +48,7 @@ const App = () => {
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/survey" element={<SurveyForm />} />
+          <Route path="/goals" element={<Goals />} />
         </Routes>
         <Footer />
         <ToastContainer position="top-center" />
