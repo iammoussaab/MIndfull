@@ -13,6 +13,9 @@ import axios from "axios";
 import { Context } from "./main";
 import Login from "./Pages/Login";
 import SurveyForm from "./components/SurveyForm";
+import GoalForm from "./components/GoalForm";
+import Dashboard from "./components/Dashboard";
+import Chatbot from "./components/Chatbot";
 const App = () => {
   const { isAuthenticated, setIsAuthenticated, setUser } =
     useContext(Context);
@@ -38,6 +41,7 @@ const App = () => {
 
   return (
     <>
+
       <Router>
         <Navbar />
         <Routes>
@@ -46,10 +50,13 @@ const App = () => {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/goals" element={<GoalForm />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/survey" element={<SurveyForm />} />
         </Routes>
         <Footer />
         <ToastContainer position="top-center" />
+        <Chatbot />
       </Router>
     </>
   );
