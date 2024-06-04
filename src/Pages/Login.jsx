@@ -1,5 +1,5 @@
 import axios from "axios";
-import  { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { toast } from "react-toastify";
 import { Context } from "../main";
 import { Link, useNavigate, Navigate } from "react-router-dom";
@@ -19,7 +19,7 @@ const Login = () => {
       await axios
         .post(
           "http://localhost:5000/api/v1/user/login",
-          { email, password, confirmPassword, role: "Patient" },
+          { email, password, role: "Patient" },
           {
             withCredentials: true,
             headers: { "Content-Type": "application/json" },
@@ -28,7 +28,7 @@ const Login = () => {
         .then((res) => {
           toast.success(res.data.message);
           setIsAuthenticated(true);
-          navigateTo("/");
+          navigateTo("/patientdashboard");
           setEmail("");
           setPassword("");
           setConfirmPassword("");
@@ -39,7 +39,7 @@ const Login = () => {
   };
 
   if (isAuthenticated) {
-    return <Navigate to={"/"} />;
+    return <Navigate to={"/patientdashboard"} />;
   }
 
   return (
@@ -64,12 +64,12 @@ const Login = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <input
+          {/* <input
             type="password"
             placeholder="Confirm Password"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
-          />
+          /> */}
           <div
             style={{
               gap: "10px",

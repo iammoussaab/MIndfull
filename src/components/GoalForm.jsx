@@ -36,7 +36,7 @@ const GoalForm = () => {
 
             console.log("Goals submitted:", response.data);
             // Optionally, you can redirect the user to another page after submitting goals
-            navigateTo("/dashboard");
+            navigateTo("/patientdashboard");
         } catch (error) {
             console.error("Error submitting goals:", error);
             alert("There was an error submitting the goals. Please try again.");

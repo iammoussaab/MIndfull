@@ -7,12 +7,11 @@ const Hero = ({ title, imageUrl }) => {
         <div className="banner">
           <h1>{title}</h1>
           <p>
-            ZeeCare Medical Institute is a state-of-the-art facility dedicated
-            to providing comprehensive healthcare services with compassion and
-            expertise. Our team of skilled professionals is committed to
-            delivering personalized care tailored to each patient's needs. At
-            ZeeCare, we prioritize your well-being, ensuring a harmonious
-            journey towards optimal health and wellness.
+            MindfulLife Wellness Center is a cutting-edge platform devoted to fostering mental well-being
+            through innovative solutions and empathetic support. Our team of experts is dedicated to providing
+            personalized tools and resources to empower individuals on their journey to mental wellness.
+            At MindfulLife, we prioritize your mental health, offering a holistic approach to support your emotional
+            and psychological well-being. With MindfulLife, embark on a transformative path towards inner peace and balance.
           </p>
         </div>
         <div className="banner">

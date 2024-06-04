@@ -18,13 +18,13 @@ const AppointmentForm = () => {
   const [hasVisited, setHasVisited] = useState(false);
 
   const departmentsArray = [
+    "Physical Therapy",
     "Pediatrics",
     "Orthopedics",
     "Cardiology",
     "Neurology",
     "Oncology",
     "Radiology",
-    "Physical Therapy",
     "Dermatology",
     "ENT",
   ];
@@ -147,6 +147,7 @@ const AppointmentForm = () => {
           <div>
             <select
               value={department}
+              defaultValue={" Physical Therapy"}
               onChange={(e) => {
                 setDepartment(e.target.value);
                 setDoctorName("");

@@ -14,8 +14,10 @@ import { Context } from "./main";
 import Login from "./Pages/Login";
 import SurveyForm from "./components/SurveyForm";
 import GoalForm from "./components/GoalForm";
-import Dashboard from "./components/Dashboard";
 import Chatbot from "./components/Chatbot";
+import PatientDashboard from "./components/dashboard/PatientDashboard";
+import ChatRoom from "./components/ChatRoom";
+
 const App = () => {
   const { isAuthenticated, setIsAuthenticated, setUser } =
     useContext(Context);
@@ -41,25 +43,31 @@ const App = () => {
 
   return (
     <>
-
       <Router>
-        <Navbar />
+        {!isAuthenticated && <Navbar />}
         <Routes>
+          <Route path="/chatroom" element={< ChatRoom />} />
+
           <Route path="/" element={<Home />} />
-          <Route path="/appointment" element={<Appointment />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/goals" element={<GoalForm />} />
-          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/survey" element={<SurveyForm />} />
+          <Route path="/appointment" element={<Appointment />} />
+          <Route path="/goals" element={<GoalForm />} />
+          {isAuthenticated ? (
+            <>
+              <Route path="/patientdashboard" element={<PatientDashboard />} />
+            </>
+          ) : null}
         </Routes>
-        <Footer />
+        {!isAuthenticated && <Footer />}
         <ToastContainer position="top-center" />
         <Chatbot />
       </Router>
     </>
   );
+
 };
 
 export default App;
