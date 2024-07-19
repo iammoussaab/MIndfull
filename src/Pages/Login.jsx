@@ -9,7 +9,7 @@ const Login = () => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+  // const [confirmPassword, setConfirmPassword] = useState("");
 
   const navigateTo = useNavigate();
 
@@ -31,7 +31,7 @@ const Login = () => {
           navigateTo("/patientdashboard");
           setEmail("");
           setPassword("");
-          setConfirmPassword("");
+          // setConfirmPassword("");
         });
     } catch (error) {
       toast.error(error.response.data.message);

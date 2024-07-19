@@ -4,6 +4,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { Context } from "../main";
+import "./Navbar.css";
 
 const Navbar = () => {
   const [show, setShow] = useState(false);

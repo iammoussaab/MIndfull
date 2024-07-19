@@ -5,40 +5,52 @@ import "react-multi-carousel/lib/styles.css";
 const Departments = () => {
   const departmentsArray = [
     {
-      name: "Pediatrics",
+      name: "Counseling Services",
       imageUrl: "/departments/pedia.jpg",
     },
     {
-      name: "Orthopedics",
-      imageUrl: "/departments/ortho.jpg",
+      name: "Psychiatry",
+      imageUrl: "/departments/psychiatry.png",
     },
     {
-      name: "Cardiology",
-      imageUrl: "/departments/cardio.jpg",
+      name: "Support Groups",
+      imageUrl: "/departments/support group.jpeg",
     },
     {
-      name: "Neurology",
-      imageUrl: "/departments/neuro.jpg",
+      name: "Family Therapy",
+      imageUrl: "/departments/family therapy.jpeg",
     },
     {
-      name: "Oncology",
-      imageUrl: "/departments/onco.jpg",
+      name: "Wellness Programs",
+      imageUrl: "/departments/willness program.jpeg",
     },
     {
-      name: "Radiology",
-      imageUrl: "/departments/radio.jpg",
+      name: "Educational Resources",
+      imageUrl: "/departments/educational-resources.jpg",
     },
     {
-      name: "Physical Therapy",
-      imageUrl: "/departments/therapy.jpg",
+      name: "Peer Support",
+      imageUrl: "/departments/peer suppor.png",
     },
     {
-      name: "Dermatology",
-      imageUrl: "/departments/derma.jpg",
+      name: "Crisis Intervention",
+      imageUrl: "/departments/crisis intervention.jpeg",
     },
     {
-      name: "ENT",
-      imageUrl: "/departments/ent.jpg",
+      name: "Substance Abuse Treatment",
+      imageUrl: "/departments/substance abuse.jpeg",
+    },
+    {
+      name: "Online Therapy",
+      imageUrl: "/departments/online health.jpeg",
+    },
+    {
+      name: "Telehealth Services",
+      imageUrl: "/departments/telehealth.jpeg",
+    },
+    {
+      name: "Mental Health Assessments",
+      imageUrl: "/departments/assessements.jpeg",
     },
   ];
 
@@ -81,8 +93,12 @@ const Departments = () => {
           {departmentsArray.map((depart, index) => {
             return (
               <div key={index} className="card">
-                <div className="depart-name">{depart.name}</div>
-                <img src={depart.imageUrl} alt="Department" />
+                <div>
+                  <img src={depart.imageUrl} alt="Department" />
+                </div>
+                <div>
+                  <div className="depart-name">{depart.name}</div>
+                </div>
               </div>
             );
           })}

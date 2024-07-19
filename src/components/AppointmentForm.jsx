@@ -18,15 +18,14 @@ const AppointmentForm = () => {
   const [hasVisited, setHasVisited] = useState(false);
 
   const departmentsArray = [
-    "Physical Therapy",
-    "Pediatrics",
-    "Orthopedics",
-    "Cardiology",
-    "Neurology",
-    "Oncology",
-    "Radiology",
-    "Dermatology",
-    "ENT",
+    "Psychiatry",
+    "Family Therapy",
+    "Counseling Services",
+    "Peer Support",
+    "Online Therapy",
+    "Telehealth Services",
+    "Mental Health Assessments",
+    "Wellness Programs",
   ];
 
   const [doctors, setDoctors] = useState([]);

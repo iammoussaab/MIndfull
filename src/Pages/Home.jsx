@@ -8,9 +8,7 @@ const Home = () => {
   return (
     <>
       <Hero
-        title={
-          "Welcome to MindfulLife Wellness Center"
-        }
+        title={"Welcome to MindfulLife Wellness Center"}
         imageUrl={"/hero.png"}
       />
       <Biography imageUrl={"/about.png"} />

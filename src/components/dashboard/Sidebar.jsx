@@ -38,7 +38,7 @@ const Sidebar = () => {
   };
 
   const gotoMessagesPage = () => {
-    navigateTo("/chatroom");
+    navigateTo("/chate");
     setShow(!show);
   };
 

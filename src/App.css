@@ -498,13 +498,14 @@ footer .content div:last-child div svg {
 }
 
 .card .depart-name {
-  margin-bottom: 30px;
+  margin-bottom: auto;
   background: #e5e5e5;
-  width: 320px;
+  width: auto;
   font-size: 24px;
   text-transform: uppercase;
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 12px;
   border-radius: 30px;
   left: 0;
@@ -691,7 +692,7 @@ input[type="time"]:before {
 }
 
 .logo-img {
-  width: 150px;
+  width: auto;
 }
 
 footer .logo-img {
